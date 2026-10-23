@@ -573,18 +573,6 @@
     });
   });
 
-  // Price Cards presets (from screenshot // Цены: 1.00$ and 0.30$)
-  document.querySelectorAll('.card-quick-action').forEach(btn => {
-    btn.addEventListener('click', () => {
-      playSound('click');
-      const val = parseFloat(btn.dataset.applyPreset) || 1.0;
-      fromAmountInput.value = val;
-      recalculate();
-      document.getElementById('converterSection').scrollIntoView({ behavior: 'smooth' });
-      showToast(`Объем $${val} применен в калькуляторе`);
-    });
-  });
-
   // Keyboard accessibility
   window.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
