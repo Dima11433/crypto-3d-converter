@@ -258,64 +258,6 @@
       </div>
     </section>
 
-    <!-- SECTION: // Требования (1:1 matching the screenshot design) -->
-    <section class="content-section" id="requirementsSection">
-      <div class="section-badge">// Требования</div>
-
-      <div class="requirement-card">
-        <!-- Left text info -->
-        <div class="req-left">
-          <h3 class="req-title">Активные кошельки</h3>
-          <p class="req-description">
-            Одна транзакция в Ethereum или BSC — и срок давности не имеет значения.
-          </p>
-        </div>
-
-        <!-- Right interactive flowchart matching reference -->
-        <div class="req-right-flow">
-          <div class="flow-chains">
-            <div class="chain-pill" data-chain="eth">
-              <span>Ethereum</span>
-            </div>
-            <div class="chain-pill" data-chain="btc">
-              <span>Bitcoin</span>
-            </div>
-          </div>
-
-          <!-- SVG Connector curved lines -->
-          <div class="flow-svg-container">
-            <svg class="flow-lines-svg" viewBox="0 0 100 80" preserveAspectRatio="none">
-              <!-- Path from Ethereum to 1tx -->
-              <path class="glow-path" d="M 0,22 C 35,22 35,40 50,40" stroke="rgba(255,255,255,0.25)" stroke-width="1.8" fill="none"/>
-              <!-- Path from Bitcoin to 1tx -->
-              <path class="glow-path" d="M 0,58 C 35,58 35,40 50,40" stroke="rgba(255,255,255,0.25)" stroke-width="1.8" fill="none"/>
-              <!-- Path from 1tx to Wallet -->
-              <path class="glow-path" d="M 50,40 L 100,40" stroke="rgba(255,255,255,0.3)" stroke-width="1.8" fill="none"/>
-            </svg>
-            <div class="tx-node-bubble" title="Минимум 1 транзакция в сети">
-              <span>1 tx</span>
-            </div>
-          </div>
-
-          <!-- Destination glowing wallet card -->
-          <div class="destination-wallet-card" id="walletCopyCard" role="button" tabindex="0" title="Нажмите, чтобы скопировать адрес">
-            <div class="wallet-label">Кошелек</div>
-            <div class="wallet-address-row">
-              <span class="wallet-hash" id="walletHashDisplay">0x7a3f...c91e</span>
-              <svg class="copy-icon" viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" fill="none" stroke-width="2">
-                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-              </svg>
-            </div>
-            <div class="wallet-status-badge">
-              <span class="status-live-dot"></span>
-              <span class="status-live-text">Live любая деятельность</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- SECTION: // Популярные пары и Live Стаканы -->
     <section class="content-section" id="popularPairsSection">
       <div class="section-badge">

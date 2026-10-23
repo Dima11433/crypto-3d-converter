@@ -108,7 +108,6 @@
   const toastNotification = document.getElementById('toastNotification');
   const toastText = document.getElementById('toastText');
   const soundToggleBtn = document.getElementById('soundToggleBtn');
-  const walletCopyCard = document.getElementById('walletCopyCard');
 
   /* ==========================================================================
      WEB AUDIO SYNTHESIZER (Pure Web Audio API - Zero External Dependencies)
@@ -559,32 +558,6 @@
     soundToggleBtn.querySelector('.icon').textContent = state.soundEnabled ? '🔊' : '🔇';
     soundToggleBtn.querySelector('.btn-text').textContent = state.soundEnabled ? 'Звук: ВКЛ' : 'Звук: ВЫКЛ';
     if (state.soundEnabled) playSound('click');
-  });
-
-  // Wallet Card Copy Interaction (from screenshot // Требования)
-  walletCopyCard.addEventListener('click', async () => {
-    const address = '0x7a3f8902c91eb44d82f7164b02543d2c8849c91e';
-    try {
-      await navigator.clipboard.writeText(address);
-    } catch (err) {
-      const textarea = document.createElement('textarea');
-      textarea.value = address;
-      document.body.appendChild(textarea);
-      textarea.select();
-      document.execCommand('copy');
-      document.body.removeChild(textarea);
-    }
-    showToast('Адрес 0x7a3f...c91e скопирован в буфер обмена!');
-  });
-
-  // Chain pills in flow
-  document.querySelectorAll('.chain-pill').forEach(pill => {
-    pill.addEventListener('click', () => {
-      const chain = pill.dataset.chain === 'eth' ? 'ETH' : 'BTC';
-      state.fromCurrency = chain;
-      updateCurrencyUI();
-      showToast(`Выбрана сеть ${pill.textContent.trim()} для конвертации`);
-    });
   });
 
   // Popular Pairs quick load
