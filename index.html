@@ -38,6 +38,10 @@
       </div>
       <h1 class="header-title">Форумный баннер + HTML</h1>
       <div class="header-actions">
+        <a href="https://wise.com/ru/currency-converter/" target="_blank" rel="noopener noreferrer" class="action-pill-btn wise-pill" title="Официальные курсы валют Wise">
+          <span class="icon">⚡</span>
+          <span class="btn-text">Курсы: Wise.com</span>
+        </a>
         <button id="soundToggleBtn" class="action-pill-btn" title="Включить/выключить звуки" aria-label="Звуковые эффекты">
           <span class="icon">🔊</span>
           <span class="btn-text">Звук: ВКЛ</span>
@@ -124,7 +128,9 @@
         <div class="card-glass converter-calc-card">
           <div class="calc-header">
             <span class="card-title">Быстрый обмен</span>
-            <span class="live-pill"><span class="dot-live"></span> Курсы обновлены</span>
+            <a href="https://wise.com/ru/currency-converter/" target="_blank" rel="noopener noreferrer" class="live-pill wise-live-link" title="Официальные котировки Wise без скрытых комиссий">
+              <span class="dot-live"></span> Курс: Wise Mid-Market ↗
+            </a>
           </div>
 
           <!-- FROM Currency Input -->
@@ -193,8 +199,12 @@
             <!-- Rate details info -->
             <div class="calc-meta-info">
               <div class="meta-line">
+                <span>Источник фиата:</span>
+                <a href="https://wise.com/ru/currency-converter/" target="_blank" rel="noopener noreferrer" class="text-wise-credit">Wise (TransferWise) Mid-Market ↗</a>
+              </div>
+              <div class="meta-line">
                 <span>Комиссия сервиса:</span>
-                <span class="text-free">0% (Без скрытых сборов)</span>
+                <span class="text-free">0% (Без скрытых наценок)</span>
               </div>
               <div class="meta-line">
                 <span>Газ / Сеть:</span>
@@ -308,43 +318,46 @@
 
     <!-- SECTION: // Популярные пары и Live Стаканы -->
     <section class="content-section" id="popularPairsSection">
-      <div class="section-badge">// Живые котировки пулов</div>
+      <div class="section-badge">
+        <span>// Живые котировки Wise & Пулов</span>
+        <a href="https://wise.com/ru/currency-converter/" target="_blank" rel="noopener noreferrer" class="badge-wise-sublink">Официальный курс wise.com ↗</a>
+      </div>
 
       <div class="pairs-grid">
-        <div class="pair-card" data-from="ETH" data-to="USD">
+        <div class="pair-card" data-from="USD" data-to="RUB">
           <div class="pair-head">
-            <span class="pair-title">ETH / USD</span>
+            <span class="pair-title">USD / RUB</span>
+            <span class="pair-trend up">Wise Live</span>
+          </div>
+          <div class="pair-price" id="tickerUsdRub">80.65 ₽</div>
+          <div class="pair-sub">Курс wise.com (Mid-Market)</div>
+        </div>
+
+        <div class="pair-card" data-from="EUR" data-to="USD">
+          <div class="pair-head">
+            <span class="pair-title">EUR / USD</span>
+            <span class="pair-trend up">Wise Live</span>
+          </div>
+          <div class="pair-price" id="tickerEurUsd">$1.1194</div>
+          <div class="pair-sub">1 USD = 0.8933 € (Wise)</div>
+        </div>
+
+        <div class="pair-card" data-from="USD" data-to="KZT">
+          <div class="pair-head">
+            <span class="pair-title">USD / KZT</span>
+            <span class="pair-trend up">Wise Live</span>
+          </div>
+          <div class="pair-price" id="tickerUsdKzt">451.29 ₸</div>
+          <div class="pair-sub">Курс wise.com (Mid-Market)</div>
+        </div>
+
+        <div class="pair-card" data-from="ETH" data-to="RUB">
+          <div class="pair-head">
+            <span class="pair-title">ETH / RUB</span>
             <span class="pair-trend up">+3.84%</span>
           </div>
-          <div class="pair-price" id="tickerEthUsd">$3,450.25</div>
-          <div class="pair-sub">Объем 24ч: $18.4M</div>
-        </div>
-
-        <div class="pair-card" data-from="BTC" data-to="USD">
-          <div class="pair-head">
-            <span class="pair-title">BTC / USD</span>
-            <span class="pair-trend up">+2.15%</span>
-          </div>
-          <div class="pair-price" id="tickerBtcUsd">$89,420.00</div>
-          <div class="pair-sub">Объем 24ч: $42.1M</div>
-        </div>
-
-        <div class="pair-card" data-from="SOL" data-to="USD">
-          <div class="pair-head">
-            <span class="pair-title">SOL / USD</span>
-            <span class="pair-trend up">+7.62%</span>
-          </div>
-          <div class="pair-price" id="tickerSolUsd">$184.50</div>
-          <div class="pair-sub">Объем 24ч: $9.2M</div>
-        </div>
-
-        <div class="pair-card" data-from="TON" data-to="RUB">
-          <div class="pair-head">
-            <span class="pair-title">TON / RUB</span>
-            <span class="pair-trend up">+4.10%</span>
-          </div>
-          <div class="pair-price" id="tickerTonRub">582.40 ₽</div>
-          <div class="pair-sub">Объем 24ч: $3.5M</div>
+          <div class="pair-price" id="tickerEthRub">278,262 ₽</div>
+          <div class="pair-sub">ETH × Курс Wise RUB</div>
         </div>
       </div>
     </section>

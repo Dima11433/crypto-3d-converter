@@ -3,6 +3,9 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: ["main"]
+  schedule:
+    # Update Wise rates every 6 hours automatically
+    - cron: "0 */6 * * *"
   workflow_dispatch:
 
 permissions:
@@ -23,6 +26,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Fetch Fresh Wise Mid-Market Rates
+        run: node fetch-wise-rates.js
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact

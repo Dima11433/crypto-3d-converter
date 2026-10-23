@@ -28,13 +28,20 @@
       XRP: 0.582,
       DOGE: 0.142,
       USD: 1.00,
-      EUR: 1.085,
-      RUB: 0.0105,
-      KZT: 0.00205,
-      GBP: 1.298,
-      CNY: 0.140,
-      TRY: 0.0292,
-      AED: 0.272
+      // Official Wise Mid-Market Rates (wise.com/ru/currency-converter/)
+      EUR: 1 / 0.893336, // 1 EUR = ~1.1194 USD (1 USD = 0.8933 EUR)
+      RUB: 1 / 80.65,    // 1 RUB = ~0.0124 USD (1 USD = 80.65 RUB)
+      KZT: 1 / 451.29,   // 1 KZT = ~0.0022 USD (1 USD = 451.29 KZT)
+      GBP: 1 / 0.747803, // 1 GBP = ~1.3372 USD (1 USD = 0.7478 GBP)
+      CNY: 1 / 6.67005,  // 1 CNY = ~0.1500 USD (1 USD = 6.67 CNY)
+      TRY: 1 / 49.7326,  // 1 TRY = ~0.0201 USD (1 USD = 49.73 TRY)
+      AED: 1 / 3.6726,   // 1 AED = ~0.2723 USD (1 USD = 3.67 AED)
+      JPY: 1 / 156.88,   // 1 JPY = ~0.0064 USD (1 USD = 156.88 JPY)
+      CHF: 1 / 0.82525,  // 1 CHF = ~1.2117 USD (1 USD = 0.825 CHF)
+      CAD: 1 / 1.4006,   // 1 CAD = ~0.7140 USD (1 USD = 1.40 CAD)
+      AUD: 1 / 1.42096,  // 1 AUD = ~0.7037 USD (1 USD = 1.42 AUD)
+      UAH: 1 / 45.05,    // 1 UAH = ~0.0222 USD (1 USD = 45.05 UAH)
+      PLN: 1 / 3.93195   // 1 PLN = ~0.2543 USD (1 USD = 3.93 PLN)
     },
     currencies: [
       { code: 'ETH', name: 'Ethereum', type: 'crypto', symbol: 'ETH', network: 'ERC-20 / EVM', change24h: '+3.84%', iconBg: 'linear-gradient(135deg, #a855f7, #6366f1)' },
@@ -44,12 +51,20 @@
       { code: 'USDT', name: 'Tether USD', type: 'crypto', symbol: '₮', network: 'TRC-20 / ERC-20', change24h: '+0.01%', iconBg: 'linear-gradient(135deg, #10b981, #059669)' },
       { code: 'BNB', name: 'BNB Chain', type: 'crypto', symbol: 'BNB', network: 'BNB Smart Chain', change24h: '+1.45%', iconBg: 'linear-gradient(135deg, #eab308, #ca8a04)' },
       { code: 'XRP', name: 'Ripple', type: 'crypto', symbol: 'XRP', network: 'XRP Ledger', change24h: '+0.85%', iconBg: 'linear-gradient(135deg, #64748b, #334155)' },
-      { code: 'USD', name: 'US Dollar', type: 'fiat', symbol: '$', network: 'SWIFT / ACH', change24h: '0.00%', iconBg: 'linear-gradient(135deg, #10b981, #059669)' },
-      { code: 'EUR', name: 'Euro', type: 'fiat', symbol: '€', network: 'SEPA / Banking', change24h: '-0.12%', iconBg: 'linear-gradient(135deg, #3b82f6, #1d4ed8)' },
-      { code: 'RUB', name: 'Российский рубль', type: 'fiat', symbol: '₽', network: 'СБП / МИР', change24h: '+0.25%', iconBg: 'linear-gradient(135deg, #ef4444, #b91c1c)' },
-      { code: 'KZT', name: 'Казахстанский тенге', type: 'fiat', symbol: '₸', network: 'Kaspi / Карта', change24h: '+0.05%', iconBg: 'linear-gradient(135deg, #06b6d4, #0891b2)' },
-      { code: 'GBP', name: 'British Pound', type: 'fiat', symbol: '£', network: 'BACS / FPS', change24h: '+0.18%', iconBg: 'linear-gradient(135deg, #8b5cf6, #6d28d9)' },
-      { code: 'CNY', name: 'Chinese Yuan', type: 'fiat', symbol: '¥', network: 'UnionPay', change24h: '-0.08%', iconBg: 'linear-gradient(135deg, #f43f5e, #be123c)' }
+      { code: 'USD', name: 'US Dollar', type: 'fiat', symbol: '$', network: 'Wise / SWIFT', change24h: '0.00%', iconBg: 'linear-gradient(135deg, #10b981, #059669)' },
+      { code: 'EUR', name: 'Euro', type: 'fiat', symbol: '€', network: 'Wise / SEPA', change24h: '-0.12%', iconBg: 'linear-gradient(135deg, #3b82f6, #1d4ed8)' },
+      { code: 'RUB', name: 'Российский рубль', type: 'fiat', symbol: '₽', network: 'Wise Mid-Market', change24h: '+0.25%', iconBg: 'linear-gradient(135deg, #ef4444, #b91c1c)' },
+      { code: 'KZT', name: 'Казахстанский тенге', type: 'fiat', symbol: '₸', network: 'Wise Mid-Market', change24h: '+0.05%', iconBg: 'linear-gradient(135deg, #06b6d4, #0891b2)' },
+      { code: 'UAH', name: 'Українська гривня', type: 'fiat', symbol: '₴', network: 'Wise Mid-Market', change24h: '+0.10%', iconBg: 'linear-gradient(135deg, #38bdf8, #facc15)' },
+      { code: 'GBP', name: 'British Pound', type: 'fiat', symbol: '£', network: 'Wise / BACS', change24h: '+0.18%', iconBg: 'linear-gradient(135deg, #8b5cf6, #6d28d9)' },
+      { code: 'CNY', name: 'Chinese Yuan', type: 'fiat', symbol: '¥', network: 'Wise / UnionPay', change24h: '-0.08%', iconBg: 'linear-gradient(135deg, #f43f5e, #be123c)' },
+      { code: 'JPY', name: 'Japanese Yen', type: 'fiat', symbol: '¥', network: 'Wise / Zengin', change24h: '-0.15%', iconBg: 'linear-gradient(135deg, #f97316, #ea580c)' },
+      { code: 'CHF', name: 'Swiss Franc', type: 'fiat', symbol: 'Fr', network: 'Wise / SIC', change24h: '+0.04%', iconBg: 'linear-gradient(135deg, #dc2626, #991b1b)' },
+      { code: 'CAD', name: 'Canadian Dollar', type: 'fiat', symbol: 'C$', network: 'Wise / EFT', change24h: '+0.07%', iconBg: 'linear-gradient(135deg, #ef4444, #e11d48)' },
+      { code: 'AUD', name: 'Australian Dollar', type: 'fiat', symbol: 'A$', network: 'Wise / NPP', change24h: '+0.12%', iconBg: 'linear-gradient(135deg, #059669, #047857)' },
+      { code: 'PLN', name: 'Polski Złoty', type: 'fiat', symbol: 'zł', network: 'Wise / Elixir', change24h: '+0.14%', iconBg: 'linear-gradient(135deg, #e11d48, #be123c)' },
+      { code: 'TRY', name: 'Turkish Lira', type: 'fiat', symbol: '₺', network: 'Wise / FAST', change24h: '-0.20%', iconBg: 'linear-gradient(135deg, #e11d48, #9f1239)' },
+      { code: 'AED', name: 'UAE Dirham', type: 'fiat', symbol: 'د.إ', network: 'Wise / CBUAE', change24h: '0.00%', iconBg: 'linear-gradient(135deg, #10b981, #047857)' }
     ]
   };
 
@@ -209,7 +224,11 @@
 
     // Update rate preview text
     const singleRate = getExchangeRate(state.fromCurrency, state.toCurrency);
-    ratePreviewBadge.textContent = `1 ${state.fromCurrency} = ${formatNumber(singleRate)} ${state.toCurrency}`;
+    const toObj = getCurrency(state.toCurrency);
+    const isWiseRate = fromObj.type === 'fiat' || toObj.type === 'fiat';
+    ratePreviewBadge.textContent = isWiseRate
+      ? `1 ${state.fromCurrency} = ${formatNumber(singleRate)} ${state.toCurrency} (Курс Wise.com)`
+      : `1 ${state.fromCurrency} = ${formatNumber(singleRate)} ${state.toCurrency}`;
 
     // Update Gas & Network estimate
     const fromObj = getCurrency(state.fromCurrency);
@@ -420,18 +439,43 @@
     recalculate();
   }
 
-  function updateTickerDisplays() {
-    const elEth = document.getElementById('tickerEthUsd');
-    const elBtc = document.getElementById('tickerBtcUsd');
-    const elSol = document.getElementById('tickerSolUsd');
-    const elTon = document.getElementById('tickerTonRub');
+  async function fetchWiseRates() {
+    try {
+      const res = await fetch('./wise-rates.json?nocache=' + Date.now());
+      if (res.ok) {
+        const data = await res.json();
+        if (data.ratesInUSD) {
+          Object.assign(state.ratesUSD, data.ratesInUSD);
+          console.log('✓ Wise live rates synchronized successfully from wise-rates.json', data.lastUpdated);
+          updateTickerDisplays();
+          recalculate();
+        }
+      }
+    } catch (e) {
+      console.warn('Using built-in Wise mid-market rates table', e);
+    }
+  }
 
-    if (elEth) elEth.textContent = `$${formatNumber(state.ratesUSD.ETH)}`;
-    if (elBtc) elBtc.textContent = `$${formatNumber(state.ratesUSD.BTC)}`;
-    if (elSol) elSol.textContent = `$${formatNumber(state.ratesUSD.SOL)}`;
-    if (elTon) {
-      const tonRub = state.ratesUSD.TON / state.ratesUSD.RUB;
-      elTon.textContent = `${formatNumber(tonRub)} ₽`;
+  function updateTickerDisplays() {
+    const elUsdRub = document.getElementById('tickerUsdRub');
+    const elEurUsd = document.getElementById('tickerEurUsd');
+    const elUsdKzt = document.getElementById('tickerUsdKzt');
+    const elEthRub = document.getElementById('tickerEthRub');
+
+    if (elUsdRub) {
+      const usdRub = 1 / state.ratesUSD.RUB;
+      elUsdRub.textContent = `${formatNumber(usdRub)} ₽`;
+    }
+    if (elEurUsd) {
+      elEurUsd.textContent = `$${formatNumber(state.ratesUSD.EUR)}`;
+    }
+    if (elUsdKzt) {
+      const usdKzt = 1 / state.ratesUSD.KZT;
+      elUsdKzt.textContent = `${formatNumber(usdKzt)} ₸`;
+    }
+    if (elEthRub) {
+      const ethRub = state.ratesUSD.ETH / state.ratesUSD.RUB;
+      elEthRub.textContent = `${formatNumber(ethRub)} ₽`;
     }
   }
 
@@ -577,10 +621,12 @@
   });
 
   // Initialize
+  fetchWiseRates();
   updateCurrencyUI();
   updateTickerDisplays();
   fetchLiveCryptoPrices();
   setInterval(simulateMicroFluctuations, 4000);
   setInterval(fetchLiveCryptoPrices, 30000);
+  setInterval(fetchWiseRates, 60000);
 
 })();
