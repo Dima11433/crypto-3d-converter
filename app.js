@@ -534,11 +534,9 @@
     });
   });
 
-  // Telegram Modal & CTA
+  // Telegram CTA Button (opens @glxs_shop_bot)
   openTelegramBtn.addEventListener('click', () => {
     playSound('click');
-    recalculate();
-    openModal(tgModal);
   });
 
   executeExchangeBtn.addEventListener('click', () => {
