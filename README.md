@@ -2,6 +2,9 @@
 
 > Интерактивный веб-сайт с 3D конвертером валют и токенов, выполненный в стиле дизайн-макета forum banner & dark web3 (`monacodesign`).
 
+🌐 **Онлайн Демо (GitHub Pages):** [https://dima11433.github.io/crypto-3d-converter/](https://dima11433.github.io/crypto-3d-converter/)  
+📦 **Репозиторий:** [https://github.com/Dima11433/crypto-3d-converter](https://github.com/Dima11433/crypto-3d-converter)
+
 ![Preview](preview.png)
 
 ## ✨ Особенности проекта
